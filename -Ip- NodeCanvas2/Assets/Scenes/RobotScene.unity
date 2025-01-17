@@ -343,9 +343,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{}}'
-  _objectReferences: []
-  _serializedVariables: []
+  _serializedBlackboard: '{"_variables":{"speed":{"_value":3.0,"_name":"speed","_id":"154da7d9-a004-41c4-8d1f-ea9a2f75f3a6","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"energy":{"_value":100.0,"_name":"energy","_id":"525e442a-ed9d-445e-9d9d-cadc757342f4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"powerStation":{"_value":1,"_name":"powerStation","_id":"d0d3128d-c3af-4244-b2cf-9b00b1d63772","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 1968003038}
+  _serializedVariables:
+  - _json: '{"_value":3.0,"_name":"speed","_id":"154da7d9-a004-41c4-8d1f-ea9a2f75f3a6","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":100.0,"_name":"energy","_id":"525e442a-ed9d-445e-9d9d-cadc757342f4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":1,"_name":"powerStation","_id":"d0d3128d-c3af-4244-b2cf-9b00b1d63772","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1968003038}
 --- !u!114 &341929445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,13 +375,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
-  _boundGraphObjectReferences: []
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"target":1,"arrivalDistance":0.2,"energyUseRate":8.0,"$type":"NodeCanvas.Tasks.Actions.ApproachAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"A-Approach","_position":{"x":-279.0,"y":318.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"compactor":2,"crushDuration":4.0,"energyUseRate":12.0,"$type":"NodeCanvas.Tasks.Actions.CrushAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"A-Crush","_position":{"x":-87.0,"y":491.5},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"target":3,"arrivalDistance":0.2,"energyUseRate":8.0,"$type":"NodeCanvas.Tasks.Actions.ApproachAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"B-Approach","_position":{"x":85.5,"y":318.5},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"compactor":4,"crushDuration":4.0,"energyUseRate":12.0,"$type":"NodeCanvas.Tasks.Actions.CrushAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"B-Crush","_position":{"x":-104.0,"y":162.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_position":{"x":-386.0,"y":-42.0},"$type":"NodeCanvas.StateMachines.AnyState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[{"rechargeRate":15.0,"maxChargeValue":100.0,"arrivalDistance":0.2,"target":5,"speed":{"_name":"speed","_targetVariableID":"154da7d9-a004-41c4-8d1f-ea9a2f75f3a6"},"energy":{"_name":"energy","_targetVariableID":"525e442a-ed9d-445e-9d9d-cadc757342f4"},"$type":"NodeCanvas.Tasks.Actions.KeelyRechargeAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":-539.5,"y":133.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.ValueUnderThresholdCT"},"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 1366323902}
+  - {fileID: 2072021876}
+  - {fileID: 821430103}
+  - {fileID: 1981231492}
+  - {fileID: 546998561}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 852, y: 195}
+    _translation: {x: 663, y: 358}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -2781,6 +2803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968003039}
+  - component: {fileID: 1968003040}
   m_Layer: 0
   m_Name: PowerStation
   m_TagString: Untagged
@@ -2807,6 +2830,26 @@ Transform:
   - {fileID: 546998561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1968003040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968003038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBlackboard: {fileID: 0}
+  _serializedBlackboard: '{"_variables":{"powerChargingStationName":{"_value":"Tim","_name":"powerChargingStationName","_id":"0b116813-fd9e-4d4a-a5d2-2c6ce6c2ea50","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
+  _serializedVariables:
+  - _json: '{"_value":"Tim","_name":"powerChargingStationName","_id":"0b116813-fd9e-4d4a-a5d2-2c6ce6c2ea50","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!1 &1981231491
 GameObject:
   m_ObjectHideFlags: 0
